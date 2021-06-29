@@ -1,22 +1,22 @@
 {
-  "name": "parcel-project-template",
-  "version": "1.1.0",
+  "name": "web-app-basics",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://chillhaze.github.io/web-app-basics/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /web-app-basics/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/chillhaze/web-app-basics.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Alexander Gotra <alexander.gotra@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/chillhaze/web-app-basics/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
