@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://chillhaze.github.io/web-app-basics/",
   "scripts": {
-    "build": "parcel build src/*.html --public-url /web-app-basics/",
+    "start":"node app.js",
     "app": "nodemon app.js"
   },
   "repository": {

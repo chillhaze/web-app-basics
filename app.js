@@ -7,6 +7,8 @@ const menuItems = require('./hw-10_menu.json');
 // добавляем в переменную express
 const app = express();
 
+// Создаем переменную для порта
+const PORT = process.env.PORT || 1234;
 // Задаем папку с статическими файлами
 app.use(express.static('public'));
 // По умолчанию в express шаблонизатор pug, мы меняем его на handlebars
@@ -69,6 +71,6 @@ app.get('/hw-10-item/:itemId', (req, res) => {
   });
 });
 
-app.listen(1234, () => {
-  console.log(`Сервер приложения обрабатывается на port ${1234}`);
+app.listen(PORT, () => {
+  console.log(`Сервер приложения обрабатывается на port ${PORT}`);
 });
