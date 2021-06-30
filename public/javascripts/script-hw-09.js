@@ -13,8 +13,8 @@ gallery.insertAdjacentHTML('beforeend', createMarkup);
 
 gallery.addEventListener('click', onGalleryItemClick);
 closeBtn.addEventListener('click', closeModal);
-next.addEventListener('click', onArrowClick);
-prev.addEventListener('click', onArrowClick);
+next.addEventListener('click', changeImg);
+prev.addEventListener('click', changeImg);
 modalBackdrop.addEventListener('click', closeModal);
 
 function createGalleryMarkup(cards) {
@@ -74,55 +74,8 @@ function closeModalOnEscBtnPush(evt) {
 }
 
 function changeImg(evt) {
-  const nextImg = evt.code === 'ArrowRight';
-  const prevImg = evt.code === 'ArrowLeft';
-  let currentIndex = Number(currentImage.dataset.index);
-  // console.log(currentIndex);
-  if (nextImg) {
-    if (currentIndex > 0 && currentIndex < defaultExport.length) {
-      currentIndex += 1;
-
-      let newImg = document.querySelector(`img[data-index='${currentIndex}']`);
-      // console.log(newImg);
-      currentImage.src = newImg.dataset.source;
-      currentImage.alt = newImg.alt;
-      currentImage.dataset.index = newImg.dataset.index;
-    } else if (currentIndex === defaultExport.length) {
-      currentIndex = 1;
-      // currentIndex += 1;
-
-      let newImg = document.querySelector(`img[data-index='${currentIndex}']`);
-      // console.log(newImg);
-      currentImage.src = newImg.dataset.source;
-      currentImage.alt = newImg.alt;
-      currentImage.dataset.index = newImg.dataset.index;
-    }
-  } else if (prevImg) {
-    if (currentIndex > 1 && currentIndex <= defaultExport.length) {
-      currentIndex -= 1;
-
-      let newImg = document.querySelector(`img[data-index='${currentIndex}']`);
-      // console.log(newImg);
-      currentImage.src = newImg.dataset.source;
-      currentImage.alt = newImg.alt;
-      currentImage.dataset.index = newImg.dataset.index;
-    } else if (currentIndex === 1) {
-      currentIndex = defaultExport.length;
-      // currentIndex -= 1;
-
-      let newImg = document.querySelector(`img[data-index='${currentIndex}']`);
-      // console.log(newImg);
-      currentImage.src = newImg.dataset.source;
-      currentImage.alt = newImg.alt;
-      currentImage.dataset.index = newImg.dataset.index;
-    }
-  }
-}
-
-function onArrowClick(evt) {
-  const nextImg = evt.target;
-  const prevImg = evt.target;
-  console.log(nextImg);
+  const nextImg = evt.code === 'ArrowRight' || evt.target === next;
+  const prevImg = evt.code === 'ArrowLeft' || evt.target === prev;
   let currentIndex = Number(currentImage.dataset.index);
   // console.log(currentIndex);
   if (nextImg) {

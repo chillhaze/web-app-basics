@@ -115,7 +115,7 @@ html {
 .lightbox__button {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,8 +143,8 @@ html {
 
 .lightbox__prev {
   position: absolute;
-  top: 230px;
-  left: -40px;
+  top: 50%;
+  left: -50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,8 +167,8 @@ html {
 
 .lightbox__next {
   position: absolute;
-  top: 230px;
-  right: -40px;
+  top: 50%;
+  right: -50px;
   display: flex;
   align-items: center;
   justify-content: center;
