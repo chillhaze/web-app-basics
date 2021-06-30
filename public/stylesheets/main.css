@@ -1,0 +1,50 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color 150ms var(--timing-function), background-color 150ms var(--timing-function);
+
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding: 30px;
+
+  border-bottom: 1px solid #000;
+}
+
+.nav-link {
+  display: block;
+  margin: 5px;
+  padding: 5px 15px;
+  background: rgb(181, 106, 243);
+  border-radius: 3px;
+
+  min-width: 130px;
+  color: rgb(250, 251, 251);
+  text-decoration: none;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{pageTitle}}</title>
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
+    {{!-- <link rel='stylesheet' href='../../node_modules/modern-normalize/modern-normalize.css' /> --}}
+    <link rel='stylesheet' href='stylesheets/main.css' />
+    <link rel='stylesheet' href='stylesheets/{{cssFileName}}.css' />
+  </head>
+  <body>
+    <header class='header'>
+      {{> site-nav}}
+    </header>
+
+    {{{body}}}
+
+    <script src='javascripts/{{jsFileName}}.js'></script>
+  </body>
+</html>
