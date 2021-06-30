@@ -26,21 +26,8 @@ app.get('/', (req, res) => {
   res.render('home', { jsFileName: 'main', pageTitle: 'Web App Basics', cssFileName: 'main' });
 });
 
-// регестрируем слушателя (get-запрос) для hw-07.html и все остальные страницы
-app.get('/hw-07', (req, res) => {
-  res.render('hw-07', {
-    jsFileName: 'script-hw-07',
-    cssFileName: 'hw-07',
-    pageTitle: 'Homework-07',
-  });
-});
-app.get('/hw-08', (req, res) => {
-  res.render('hw-08', {
-    jsFileName: 'script-hw-08',
-    cssFileName: 'hw-08',
-    pageTitle: 'Homework-08',
-  });
-});
+// регестрируем слушателя (get-запрос) для hw-09.html и hw-10.html
+
 app.get('/hw-09', (req, res) => {
   res.render('hw-09', {
     jsFileName: 'script-hw-09',
